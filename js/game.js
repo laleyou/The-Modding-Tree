@@ -428,3 +428,12 @@ var interval = setInterval(function() {
 }, 50)
 
 setInterval(function() {needCanvasUpdate = true}, 500)
+
+
+function moveinmapdata1(amtX,amtY) {
+    if (y.add(amtY)>0 && x.add(amtX)>0)
+        if (amtY.neq(0) && mapdata1[x.add(amtX)][y.add(amtY)] < 2) 
+            y=y.add(amtY)
+        if (amtX.neq(0) && mapdata1[x.add(amtX)][y.add(amtY)] !=(1||3))
+            x=x.add(amtX)
+}
